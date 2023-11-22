@@ -145,7 +145,9 @@ window.addEventListener('load', ()=>{
         const li =document.createElement('li');
         li.innerText = userInput;
         ul.appendChild(li);
-    })
+
+        //ul.value = '';
+        })
 })
 
 ---------------------------------------------------------*/
@@ -167,3 +169,111 @@ base elevato alla exponent . (2.5 punti)
 messaggio che indica che l'operazione è completa. (2.5 punti)*/
 
 
+/*----------------------------------------------------------------------------------------
+
+const power = (base, exponent) => { 
+    if (typeof base !== 'number' || typeof exponent !== 'number') {
+        let errorMessage = `'base' ed 'exponent' non sono dei numeri `;
+    
+        if (typeof base !== 'number') {
+          errorMessage += `'base' non è un numero: ${base}.`;
+        }
+    
+        if (typeof exponent !== 'number') {
+          errorMessage += `'exponent' non è un numero: ${exponent}.`;
+        }
+
+        console.error(errorMessage);
+        return null;
+    }
+
+    try {
+        const result = Math.pow(base, exponent);
+        console.log('Operazione completata con successo.');
+        return result;
+      } catch (error) {
+        console.error('Si è verificato un errore durante il calcolo della potenza:', error.message);
+        return null;
+      } finally {
+        // 4. Stampa un messaggio indicando che l'operazione è completa
+        console.log('Operazione completata.');
+      }
+}
+
+const result = power(,-)
+if (result !== null) {
+  console.log('Risultato:', result);
+}
+
+
+--------------------------------------------------------------------------------------*/
+
+
+/*Esercizio 6: Clonazione di Oggetti (15 punti)
+Dato il seguente oggetto annidato che rappresenta un team di sviluppatori, esegui i
+compiti sottostanti:
+const devTeam = {
+ lead: {
+ name: "Alice",
+ skills: ["JavaScript", "React", "Node.js"]
+ },
+ testers: [
+ { name: "Bob", skills: ["HTML", "CSS", "JavaScript"] },
+ { name: "Charlie", skills: ["Python", "Django", "PostgreSQL"] }
+ ],
+ projectName: "WebApp"
+};
+1. In un commento, scrivi quanti oggetti l’espressione soprastante ha inserito in
+memoria ed elencali. (2.5 punti)
+2. Crea una variabile chiamata teamLead che faccia riferimento alla proprietà lead
+dell'oggetto devTeam . Aggiungi "GraphQL" alle skills di teamLead .
+3. Crea una copia dell'oggetto devTeam e memorizzala in una nuova variabile
+chiamata devTeamCopy . Non puoi usare la funzione integrata structuredClone . Poi,
+cambia la proprietà projectName di devTeam2 in "MobileApp". (2.5 punti)
+4. Costruisci una funzione che crea e restituisce un oggetto tester a partire dal
+parametro name (stringa). Durante la creazione dell’oggetto, la funzione
+dovrebbe anche assegnare un array skills con tre stringhe casuali tra
+"JavaScript", "React", "Node.js", "HTML", "CSS", "Python", "Django",
+"PostgreSQL". (5 punti)
+Usa questa funzione per aggiungere un nuovo tester a devTeamCopy . (2.5 punti)
+5. In un commento, scrivi quanti oggetti sono stati creati in memoria oltre a quelli
+iniziali, e giustifica la tua risposta. (2.5 punti)*/
+
+
+const devTeam = {
+    lead: {
+    name: "Alice",
+    skills: ["JavaScript", "React", "Node.js"]
+    },
+    testers: [
+    { name: "Bob", skills: ["HTML", "CSS", "JavaScript"] },
+    { name: "Charlie", skills: ["Python", "Django", "PostgreSQL"] }
+    ],
+    projectName: "WebApp"
+   };
+
+
+   // compreso devTeam ci sono in totale 8 oggetti: devTeam, lead, lead.skills, testers, testers.bob, testers.bob.skills, testers.charlie, tsters.charlie.skills
+   
+const teamLead = devTeam.lead;
+teamLead.skills.push("GraphQL");
+
+const devTeamCopy = JSON.parse(JSON.stringify(devTeam));
+devTeamCopy.projectName = "MobileApp";
+
+function createTester(name) {
+    const skills = [];
+    for (let i = 0; i < 3; i++) {
+      const randomSkill = ["JavaScript", "React", "Node.js", "HTML", "CSS", "Python", "Django", "PostgreSQL"][
+        Math.floor(Math.random() * 8)
+      ];
+      skills.push(randomSkill);
+    }
+    return { name, skills };
+}
+const newTester = createTester("David");
+devTeamCopy.testers.push(newTester);
+
+//console.log(newTester)
+
+//sono stati creati 8 oggetti quando abbiamo creato devTeamCopy a cui abbiamo aggiunto altri 2 oggetti attraverso la funzione createTester.
