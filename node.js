@@ -110,4 +110,53 @@ const book = {
 
 
 
-      /*
+      /*Esercizio 4: DOM e Eventi (20 punti)
+Crea una pagina HTML con un <input> di testo, un elemento <button> , un elemento
+<p> con id “ errorMessage ” e un elemento <ul> con id " tasks ".
+Scrivi codice JavaScript che aggiunge un ascoltatore di eventi al <button> che,
+quando cliccato, se l'utente non ha scritto nulla nell’ <input> :
+inserisce all'interno del <p> " errorMessage " un messaggio di errore che dice "Per
+favore, inserisci del testo."; (5 punti)
+Altrimenti, se c’è del testo all’interno dell’ <input> :
+svuota il contenuto del <p> " errorMessage "; (5 punti)
+inserisce all'interno del <ul> " tasks " un nuovo <li> che ha come contenuto ciò
+che è stato inserito dall’utente nell’ <input>; (10 punti)*/
+
+
+window.addEventListener('load', ()=>{
+    const input = document.getElementById('testo');
+    const btn = document.getElementById('btn');
+    const p = document.getElementById('errorMessage');
+    const ul = document.getElementById('tasks');
+
+    btn.addEventListener('click', ()=>{
+        userInput = input.value.trim();
+
+        if (userInput === '') {
+            p.innerText = 'Per favore, inserisci del testo'
+        }else {
+            p.innerText = '';
+        }
+
+        const li =document.createElement('li');
+        li.innerText = userInput;
+        ul.appendChild(li);
+    })
+})
+
+
+
+
+
+/*Esercizio 5: Error Handling e Parsing (20 punti)
+Scrivi una funzione power per elevare un numero ad una potenza data:
+1. Prende due numeri come parametri ( base e exponent ).
+2. Controlla che effettivamente siano stati passati due numeri. In caso contrario,
+lancia un errore che mostra nel messaggio quale dei parametri non è un
+Esame Modulo JavaScript 3
+numero. Se entrambi non sono dei numeri, il messaggio d’errore li mostra
+entrambi. (15 punti)
+3. Nel caso in cui sia avvenuto un errore, la funzione ritorna null , altrimenti ritorna
+base elevato alla exponent . (2.5 punti)
+4. Indipendentemente dal successo o dal fallimento, stampa in console un
+messaggio che indica che l'operazione è completa. (2.5 punti)*/
