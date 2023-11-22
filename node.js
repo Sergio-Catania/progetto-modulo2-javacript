@@ -60,7 +60,6 @@ function concatenaStringhe(stringhe){
 
 /*Esercizio 3: Array e Oggetti (20 punti)
 Dato il seguente oggetto che rappresenta un libro, esegui i compiti sottostanti:
-Esame Modulo JavaScript 2
 const book = {
 title: "Il Grande Gatsby",
 author: "F. Scott Fitzgerald",
@@ -123,6 +122,11 @@ inserisce all'interno del <ul> " tasks " un nuovo <li> che ha come contenuto ci�
 che è stato inserito dall’utente nell’ <input>; (10 punti)*/
 
 
+
+
+/*--------------------------------------------------
+
+
 window.addEventListener('load', ()=>{
     const input = document.getElementById('testo');
     const btn = document.getElementById('btn');
@@ -144,6 +148,8 @@ window.addEventListener('load', ()=>{
     })
 })
 
+---------------------------------------------------------*/
+
 
 
 
@@ -153,10 +159,11 @@ Scrivi una funzione power per elevare un numero ad una potenza data:
 1. Prende due numeri come parametri ( base e exponent ).
 2. Controlla che effettivamente siano stati passati due numeri. In caso contrario,
 lancia un errore che mostra nel messaggio quale dei parametri non è un
-Esame Modulo JavaScript 3
 numero. Se entrambi non sono dei numeri, il messaggio d’errore li mostra
 entrambi. (15 punti)
 3. Nel caso in cui sia avvenuto un errore, la funzione ritorna null , altrimenti ritorna
 base elevato alla exponent . (2.5 punti)
 4. Indipendentemente dal successo o dal fallimento, stampa in console un
 messaggio che indica che l'operazione è completa. (2.5 punti)*/
+
+
