@@ -11,6 +11,9 @@ oppure
 se l'anno è divisibile per 400;
 */
 
+
+/*-------------------------------------------------
+
 let nomeUtente = prompt('Inserisci il tuo nome');
 let datadiNascita = prompt('Inserisci la tua data di nascita')
     if (datadiNascita % 4 === 0) {
@@ -18,6 +21,8 @@ let datadiNascita = prompt('Inserisci la tua data di nascita')
 }else {
     alert ('Non sei nato in un anno bisestile')
 }
+
+---------------------------------------------------*/
 
 
 
@@ -30,3 +35,22 @@ Scrivi una funzione JavaScript che:
 caratteri e restituiscila. (5 punti)
 4. Se il ciclo si completa senza che la stringa superi i 10 caratteri, restituisci la
 stringa concatenata.*/
+
+
+function concatenaStringhe(stringhe){
+    let array= [];
+    for (let i=0; i<array.length; i++) {
+        let parola = array[i];
+
+        if (parola[0] === 'A' || currentString[0] === 'a') {
+        array += parola;
+
+        if (array.length > 10){
+            array = array.slice(0,10);
+            break;
+        }
+        }
+    }
+    return array
+}
+ 
