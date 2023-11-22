@@ -8,8 +8,7 @@ in un anno bisestile. (5 punti)
 ⚠️ Un anno è bisestile se:
 è divisibile per 4 e allo stesso tempo non è divisibile per 100;
 oppure
-se l'anno è divisibile per 400;
-*/
+se l'anno è divisibile per 400;*/
 
 
 /*-------------------------------------------------
@@ -37,6 +36,8 @@ caratteri e restituiscila. (5 punti)
 stringa concatenata.*/
 
 
+/*--------------------------------------------------
+
 function concatenaStringhe(stringhe){
     let array= [];
     for (let i=0; i<array.length; i++) {
@@ -53,4 +54,60 @@ function concatenaStringhe(stringhe){
     }
     return array
 }
- 
+
+--------------------------------------------------------*/
+
+
+/*Esercizio 3: Array e Oggetti (20 punti)
+Dato il seguente oggetto che rappresenta un libro, esegui i compiti sottostanti:
+Esame Modulo JavaScript 2
+const book = {
+title: "Il Grande Gatsby",
+author: "F. Scott Fitzgerald",
+year: 1925,
+};
+1. Aggiungi una nuova proprietà rating all'oggetto libro, che rappresenta il rating
+del libro, e inizializzalo a 6 .
+2. Aggiungi un metodo increaseRating che accetta come argomento un valore
+numerico e che incrementa il rating del libro del valore passato alla funzione. (10
+punti)
+Il nuovo rating risultante, non può superare 10. (2.5 punti)
+3. Rimuovi la proprietà year dall'oggetto libro. (2.5 punti)
+4. Stampa in console ogni proprietà dell'oggetto libro in questo formato: "[chiave]:
+[valore]" . (5 punti)*/
+
+
+/*---------------------------------------------
+
+const book = {
+    title: "Il Grande Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925,
+    };
+
+    const addRating = function(book, initialRating = 6) {
+        book.rating = initialRating;
+      }
+    let increaseRating = function(book, value) {
+        book.rating += value;
+        book.rating = Math.min(book.rating, 10);
+    }
+
+    const deleteYear = function(book){
+        delete book.year;
+    }
+
+    addRating(book)
+    increaseRating(book,3)
+    deleteYear(book)
+
+    for (const key in book) {
+        console.log(`[${key}]: ${book[key]}`);
+      }
+      
+      
+      ------------------------------------------*/
+
+
+
+      /*
