@@ -169,7 +169,7 @@ base elevato alla exponent . (2.5 punti)
 messaggio che indica che l'operazione è completa. (2.5 punti)*/
 
 
-/*----------------------------------------------------------------------------------------
+
 
 const power = (base, exponent) => { 
     if (typeof base !== 'number' || typeof exponent !== 'number') {
@@ -200,13 +200,13 @@ const power = (base, exponent) => {
       }
 }
 
-const result = power(,-)
+const result = power(5,3)
 if (result !== null) {
   console.log('Risultato:', result);
 }
 
 
---------------------------------------------------------------------------------------*/
+
 
 
 /*Esercizio 6: Clonazione di Oggetti (15 punti)
@@ -238,6 +238,9 @@ dovrebbe anche assegnare un array skills con tre stringhe casuali tra
 Usa questa funzione per aggiungere un nuovo tester a devTeamCopy . (2.5 punti)
 5. In un commento, scrivi quanti oggetti sono stati creati in memoria oltre a quelli
 iniziali, e giustifica la tua risposta. (2.5 punti)*/
+
+
+/*------------------------------------------------------------------------
 
 
 const devTeam = {
@@ -277,3 +280,6 @@ devTeamCopy.testers.push(newTester);
 //console.log(newTester)
 
 //sono stati creati 8 oggetti quando abbiamo creato devTeamCopy a cui abbiamo aggiunto altri 2 oggetti attraverso la funzione createTester.
+
+
+---------------------------------------------------------------------------*/
