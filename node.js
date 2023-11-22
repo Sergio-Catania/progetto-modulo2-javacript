@@ -169,7 +169,7 @@ base elevato alla exponent . (2.5 punti)
 messaggio che indica che l'operazione è completa. (2.5 punti)*/
 
 
-
+/*----------------------------------------------------------------------------------------------
 
 const power = (base, exponent) => { 
     if (typeof base !== 'number' || typeof exponent !== 'number') {
@@ -206,7 +206,7 @@ if (result !== null) {
 }
 
 
-
+---------------------------------------------------------------------*/
 
 
 /*Esercizio 6: Clonazione di Oggetti (15 punti)
